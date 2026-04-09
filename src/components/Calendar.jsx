@@ -86,7 +86,7 @@ function Calendar({date,setDate,start,end,setStart,setEnd,notes}){
                         >
                             -
                         </button>
-                        <span className="font-medium text-base md:text-lg">{year}</span>
+                        <span className="font-medium text-sm md:text-lg">{year}</span>
                         <button
                             onClick={() => setDate(new Date(year+1,month,1))}
                             className="px-2 py-1 hover:bg-gray-200 rounded"
