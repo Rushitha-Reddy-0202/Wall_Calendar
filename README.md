@@ -88,7 +88,7 @@ http://localhost:5173
 
 ## 🌐 Live Demo (Optional)
 
-👉 Add your Vercel / Netlify link here
+👉 (https://wall-calendar-flax.vercel.app/)
 
 ---
 
@@ -140,5 +140,5 @@ src/
 
 ## 🙌 Author
 
-* Name: Your Name
-* GitHub: https://github.com/
+* Name: Rushitha Reddy
+* GitHub: [https://github.com/](https://github.com/Rushitha-Reddy-0202)
