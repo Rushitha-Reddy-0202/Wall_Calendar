@@ -21,10 +21,10 @@ function Layout({date,setDate,start,end,setStart,setEnd,notes,setNotes,nextDate,
                         <Image month={nextDate.getMonth()}/>
                     </div>
                     <div className="h-[50%] flex gap-2 p-2">
-                        <div className="w-1/2 overflow-hidden">
+                        <div className="w-2/5 overflow-hidden">
                             <Notes notes={notes} setNotes={setNotes} start={start} end={end} setStart={setStart} setEnd={setEnd} date={nextDate}/>
                         </div>
-                        <div className="w-1/2 overflow-hidden">
+                        <div className="w-3/5 overflow-hidden">
                             <Calendar date={nextDate} setDate={()=>{}} start={start} end={end} setStart={setStart} setEnd={setEnd} notes={notes}/>
                         </div>
                     </div>

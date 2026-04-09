@@ -111,7 +111,7 @@ function Calendar({date,setDate,start,end,setStart,setEnd,notes}){
                     </div>
                 )}
             </div>
-            <div className="grid grid-cols-7 text-center text-[10px] md:text-sm mb-2 text-gray-500">
+            <div className="grid grid-cols-7 text-center text-[5px] md:text-sm mb-2 text-gray-500">
                 {days.map((d,i)=>(
                     <div key={i} className={`${d==="Sun" || d==="Sat"?"text-red-400":"text-black"}`}>
                         {d}
@@ -138,7 +138,7 @@ function Calendar({date,setDate,start,end,setStart,setEnd,notes}){
                         <div
                             key={i}
                             onClick={()=>handleClick(d)}
-                            className={`h-8 md:h-10 rounded-full flex flex-col items-center justify-center cursor-pointer hover:scale-105 transition 
+                            className={`h-8 md:h-10 rounded-full flex flex-col text-center text-[5px] md:text-sm items-center justify-center cursor-pointer hover:scale-105 transition 
                             ${d.type==="current"?"":"text-gray-400"}
                             ${isStart||isEnd?`${theme.color} text-white`:""}
                             ${isBetween?theme.light:""}
