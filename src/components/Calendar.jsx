@@ -78,7 +78,7 @@ function Calendar({date,setDate,start,end,setStart,setEnd,notes}){
                     </button>
                 </div>
                 {show&&(
-                    <div className="absolute top-12 left-1/2 -translate-x-1/2 bg-white shadow-lg rounded p-2 md:p-3 max-h-56 overflow-auto text-base md:text-lg z-10 w-56">
+                    <div className="absolute top-12 left-1/2 -translate-x-1/2 bg-white shadow-lg rounded p-2 md:p-3 max-h-56 overflow-auto no-scrollbar z-10 w-56">
                         <div className="flex justify-between items-center mb-3">
                         <button
                             onClick={() => setDate(new Date(year-1,month,1))}
@@ -86,7 +86,7 @@ function Calendar({date,setDate,start,end,setStart,setEnd,notes}){
                         >
                             -
                         </button>
-                        <span className="font-medium">{year}</span>
+                        <span className="font-medium text-base md:text-lg">{year}</span>
                         <button
                             onClick={() => setDate(new Date(year+1,month,1))}
                             className="px-2 py-1 hover:bg-gray-200 rounded"
@@ -102,7 +102,7 @@ function Calendar({date,setDate,start,end,setStart,setEnd,notes}){
                                 setDate(new Date(year,i,1))
                                 setShow(false)
                             }}
-                            className="p-2 hover:bg-gray-100 rounded cursor-pointer"
+                            className="p-2 text-base md:text-lg hover:bg-gray-100 rounded cursor-pointer"
                             >
                             {m.slice(0, 3)}
                             </div>
