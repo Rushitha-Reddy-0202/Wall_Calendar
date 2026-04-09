@@ -78,7 +78,7 @@ function Calendar({date,setDate,start,end,setStart,setEnd,notes}){
                     </button>
                 </div>
                 {show&&(
-                    <div className="absolute top-12 left-1/2 -translate-x-1/2 bg-white shadow-lg rounded p-2 md:p-3 max-h-56 overflow-auto no-scrollbar z-10 w-56">
+                    <div className="absolute top-12 left-1/2 -translate-x-1/2 bg-white shadow-lg rounded p-2 md:p-3 max-h-50 overflow-auto no-scrollbar w-50">
                         <div className="flex justify-between items-center mb-3">
                         <button
                             onClick={() => setDate(new Date(year-1,month,1))}
@@ -94,7 +94,7 @@ function Calendar({date,setDate,start,end,setStart,setEnd,notes}){
                             +
                         </button>
                         </div>
-                        <div className="grid grid-cols-3 gap-2 text-center">
+                        <div className="grid grid-cols-3 text-center">
                         {months.map((m, i)=>(
                             <div
                             key={i}
@@ -102,7 +102,7 @@ function Calendar({date,setDate,start,end,setStart,setEnd,notes}){
                                 setDate(new Date(year,i,1))
                                 setShow(false)
                             }}
-                            className="p-2 text-base md:text-lg hover:bg-gray-100 rounded cursor-pointer"
+                            className="justify-center text-xs p-1 md:text-base hover:bg-gray-100 rounded cursor-pointer"
                             >
                             {m.slice(0, 3)}
                             </div>
@@ -113,7 +113,7 @@ function Calendar({date,setDate,start,end,setStart,setEnd,notes}){
             </div>
             <div className="grid grid-cols-7 text-center text-[5px] md:text-sm mb-2 text-gray-500">
                 {days.map((d,i)=>(
-                    <div key={i} className={`${d==="Sun" || d==="Sat"?"text-red-400":"text-black"}`}>
+                    <div key={i} className={`${d==="Sun" || d==="Sat"?"text-red-400 font-medium":"text-black font-medium"}`}>
                         {d}
                     </div>
                 ))}
