@@ -65,7 +65,7 @@ function Calendar({date,setDate,start,end,setStart,setEnd,notes}){
                     </button>
                     <div
                         onClick={() => setShow(!show)}
-                        className="text-lg font-semibold tracking-wide cursor-pointer text-center flex flex-col"
+                        className="text-base md:text-lg font-semibold tracking-wide cursor-pointer text-center flex flex-col"
                     >
                         <span>{months[month]}</span>
                         <span>{year}</span>
@@ -78,7 +78,7 @@ function Calendar({date,setDate,start,end,setStart,setEnd,notes}){
                     </button>
                 </div>
                 {show&&(
-                    <div className="absolute top-12 left-1/2 -translate-x-1/2 bg-white shadow-lg rounded p-2 md:p-3 max-h-56 overflow-y-auto overflow-x-hidden z-10 w-56">
+                    <div className="absolute top-12 left-1/2 -translate-x-1/2 bg-white shadow-lg rounded p-2 md:p-3 max-h-56 overflow-auto text-base md:text-lg z-10 w-56">
                         <div className="flex justify-between items-center mb-3">
                         <button
                             onClick={() => setDate(new Date(year-1,month,1))}
@@ -138,7 +138,7 @@ function Calendar({date,setDate,start,end,setStart,setEnd,notes}){
                         <div
                             key={i}
                             onClick={()=>handleClick(d)}
-                            className={`h-8 md:h-10 rounded-full flex flex-col text-center text-[5px] md:text-sm items-center justify-center cursor-pointer hover:scale-105 transition 
+                            className={`h-6 md:h-10 rounded-full flex flex-col text-center text-[5px] md:text-sm items-center justify-center cursor-pointer hover:scale-105 transition 
                             ${d.type==="current"?"":"text-gray-400"}
                             ${isStart||isEnd?`${theme.color} text-white`:""}
                             ${isBetween?theme.light:""}

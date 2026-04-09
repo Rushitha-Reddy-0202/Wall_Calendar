@@ -32,13 +32,13 @@ function Notes({notes,setNotes,start,end,setStart,setEnd,date}){
     //html
     return(
         <div className={`w-full h-full p-2 flex flex-col text-xs md:text-base ${themes[month].color1}`}>
-            <p className={`text-center text-2xl m-2 ${themes[month].light}`}>Notes</p>
+            <p className={`text-center text-base font-semibold md:text-2xl m-2 ${themes[month].light}`}>Notes</p>
             <div className="m-2 flex flex-col md:flex-row gap-2">
                 <input 
                     value={text} 
                     placeholder="write notes here..." 
                     onChange={(e)=>setText(e.target.value)} 
-                    className="border p-2 text-sm flex-1"
+                    className="border p-2 text-[5px] flex-1 md:text-sm"
                 />
                 <button 
                     disabled={!start||!end} 
